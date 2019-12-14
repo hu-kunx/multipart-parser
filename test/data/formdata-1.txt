@@ -1,0 +1,11 @@
+------WebKitFormBoundaryMBitmlM04OnkA4Ol
+Content-Disposition: form-data; name="nickName";
+Content-Transfer-Encoding: quoted-printable
+
+水电费水电费
+------WebKitFormBoundaryMBitmlM04OnkA4Ol
+Content-Disposition: form-data; name="phone"
+Content-Type: text/plain; charset=base64
+
+axsfsdfsdf
+------WebKitFormBoundaryMBitmlM04OnkA4Ol--

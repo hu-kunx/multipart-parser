@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+<form action="./upload" target="form_iframe" enctype="application/x-www-form-urlencoded" method="post">
+  <input type="text" name="name" value="hukun符">
+  <input type="text" name="phone" value="17665233937">
+  <input type="submit"    value="send">
+</form>
+<iframe id="form_iframe" name="form_iframe" style="display:none;"></iframe>
+
+<input type="file" id="file">
+<button id="send">send</button>
+<button id="reset">reset</button>
+<script>
+  let f = document.getElementById( "file" );
+  let s = document.getElementById( "send" );
+  let r = document.getElementById( "reset" );
+  let formdata = new FormData();
+  formdata.append( 'nickName', "hukun水电费水电费" );
+  formdata.append( 'phone', "17665233937" );
+  formdata.append( 'phone', "dfsdfsd" );
+
+  f.onchange = () => {
+    formdata.append( 'file', f.files[ 0 ], f.files[ 0 ].name )
+    console.log(f.files[0])
+    formdata.append("password", "123123123")
+  };
+  s.onclick = () => {
+    console.log(1)
+    fetch( "./upload", {
+      method: "POST",
+      body: formdata
+      // body: JSON.stringify({
+      //   nickName: 'hukun',
+      //   phone: '17665233936'
+      // })
+    } ).then( res => {
+      console.log( res )
+    } ).catch( err => {
+      console.log( err )
+    } )
+  };
+
+  r.onclick = () => {
+    formdata = new FormData();
+    formdata.append( 'nickName', "hukun" );
+    formdata.append( 'phone', "17665233937" );
+  }
+
+
+</script>
