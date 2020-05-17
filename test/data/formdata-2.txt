@@ -2,5 +2,5 @@
 Content-Disposition: form-data; name="file"; filename="text.txt" filename*=utf8''dsfdfk
 Content-Transfer-Encoding: quoted-printable
 
-{{ data }}
+{{ 二进制data }}
 ------WebKitFormBoundaryMBitmlM04OnkA4Ol--
