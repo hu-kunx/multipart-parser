@@ -4,7 +4,7 @@ const parse_body = require("../lib/multipart-from-data.js");
 http
   .createServer(async (req, res) => {
     if (req.method.toLocaleUpperCase() === "POST" && req.url === "/upload") {
-      let value = await parse_body(req, {});
+      let value = await parse_body.parse(req, {});
       console.log(value);
       res.end(JSON.stringify(value));
     } else {
